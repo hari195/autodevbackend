@@ -42,7 +42,7 @@ description: >
   for diagnostics.
 status: approved
 priority: high
-asil_level: QM
+asil_level: B
 owner: lead-architect
 tags:
   - architecture
