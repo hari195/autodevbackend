@@ -1,78 +1,13 @@
-test_requirements:
-  - id: TEST-001-001
-    title: Startup Initialization Sequence Test
-    description: |
-      Verify that the system executes the complete initialization sequence within 5 seconds
-      and transitions from OFF to INITIALIZING to READY states in the correct order.
-    related_requirements:
-      - REQ-001-001
-      - REQ-003-001
-    test_type: Integration
-    priority: High
-    
-  - id: TEST-001-002
-    title: Service Availability Verification Test
-    description: |
-      Test that the system correctly verifies service availability during startup. Verify that
-      the system enters degraded/SAFE_MODE when a critical service fails to initialize.
-    related_requirements:
-      - REQ-001-002
-      - REQ-003-002
-    test_type: Integration
-    priority: High
-    
-  - id: TEST-001-003
-    title: Startup Progress Indication Test
-    description: |
-      Verify that visual feedback (progress indicator or splash screen) is displayed during
-      startup and remains visible until the system reaches READY state.
-    related_requirements:
-      - REQ-001-003
-    test_type: System
-    priority: Medium
-    
-  - id: TEST-001-004
-    title: Graceful Shutdown Sequence Test
-    description: |
-      Verify that the system executes a graceful shutdown sequence, terminating all services
-      in the correct order and completing within 3 seconds. Verify state transition from
-      READY to SHUTTING_DOWN to OFF.
-    related_requirements:
-      - REQ-002-001
-      - REQ-003-001
-    test_type: Integration
-    priority: High
-    
-  - id: TEST-001-005
-    title: Data Persistence on Shutdown Test
-    description: |
-      Verify that all critical user data (settings, session state, media playback position)
-      is persisted to non-volatile storage during shutdown and can be restored on next startup.
-      Test data integrity even when shutdown is interrupted.
-    related_requirements:
-      - REQ-002-002
-    test_type: Integration
-    priority: High
-    
-  - id: TEST-001-006
-    title: State Transition Atomicity Test
-    description: |
-      Verify that state transitions are atomic and the system rejects new commands during
-      critical transitions (INITIALIZING, SHUTTING_DOWN).
-    related_requirements:
-      - REQ-003-001
-    test_type: Unit
-    priority: High
-    
-  - id: TEST-001-007
-    title: Error Recovery During Startup Test
-    description: |
-      Test that the system attempts automatic recovery up to 3 times when encountering errors
-      during startup. Verify that the system enters SAFE_MODE after failed recovery attempts
-      and logs errors appropriately.
-    related_requirements:
-      - REQ-003-002
-    test_type: Integration
-    priority: Medium
-
-
+artifact_id: TEST-001
+title: "Startup Initialization Sequence Test"
+description: |
+  Verify that the system executes the complete initialization sequence within 5 seconds
+  and transitions from OFF to INITIALIZING to READY states in the correct order.
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [integration, startup, safety]
+test_type: Integration
+linked_requirements: [REQ-001, REQ-003]
+linked_architecture: [ARCH-001]
