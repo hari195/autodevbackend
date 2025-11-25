@@ -31,7 +31,7 @@ priority: high
 asil_level: ASIL-B
 owner: "lead-architect"
 tags: [architecture, state-machine, startup]
-state_diagram: |
+plantuml_source |
   @startuml
   [*] --> OFF
   
