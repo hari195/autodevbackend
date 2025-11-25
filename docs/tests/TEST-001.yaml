@@ -9,5 +9,5 @@ asil_level: ASIL-B
 owner: "test-engineer"
 tags: [integration, startup, safety]
 test_type: Integration
-tests: [REQ-001, REQ-003]
-implements: [ARCH-001]
+linked_requirements: [REQ-001, REQ-003]
+linked_architecture: [ARCH-001]
