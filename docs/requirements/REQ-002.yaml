@@ -1,0 +1,22 @@
+requirements:
+  - id: REQ-002-001
+    title: Graceful Shutdown Sequence
+    description: |
+      The infotainment system shall execute a graceful shutdown sequence that saves all user
+      preferences, closes active applications, and terminates all services in the correct order.
+      The shutdown sequence shall complete within 3 seconds.
+    priority: High
+    type: Functional
+    category: Shutdown
+    
+  - id: REQ-002-002
+    title: Data Persistence on Shutdown
+    description: |
+      The system shall persist all critical user data (settings, session state, media playback position)
+      to non-volatile storage before power-off. The system shall ensure data integrity even if
+      shutdown is interrupted.
+    priority: High
+    type: Functional
+    category: Shutdown
+
+
